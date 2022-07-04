@@ -5,7 +5,7 @@
 // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-string[] array = "London", "Kiev", "Mos", "War", "Vienn";
+string[] array = {"London", "Kiev", "Mos", "War", "Nep", "NY", "Vienn"};
 int count = AnswerArrayLength(array);
 string[] answerArray = FillArray(array, count);
 PrintArray(answerArray);
@@ -16,7 +16,7 @@ int AnswerArrayLength (string[] array)
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if array[i].Length>3
+        if (array[i].Length<=3)
         {
             count++;
         }
@@ -30,7 +30,7 @@ string[] FillArray(string[] array, int count)
     int newCount=0;
     for (int i = 0; i < array.Length; i++)
     {
-        if array[i].Length>3
+        if (array[i].Length<=3)
         {
            answerArray[newCount]=array[i];
            newCount++;
